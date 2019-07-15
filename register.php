@@ -6,6 +6,10 @@ $db = "heroku_b6d14ed2f75980f";
 
 $con = mysql_connect($host,$user,$password,$db);
 
+if($con){
+
+    echo json_encode($response);
+}
     $username = $_POST["username"];
     $first_name = $_POST["first_name"];
     $last_nmae = $_POST["last_nmae"];
@@ -22,5 +26,4 @@ $con = mysql_connect($host,$user,$password,$db);
     $response = array();
     $response["success"] = true;  
     
-    echo json_encode($response);
 ?>
